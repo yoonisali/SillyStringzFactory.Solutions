@@ -4,20 +4,21 @@
 
 <head>
   <meta charset="utf-8">
-  <title>SillyStringz.Solutions</title>
+  <title>Dr. SillyStringz's Factory</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="~/css/styles.css">
+  <link rel="stylesheet" href="~/css/header.css">
 </head>
 
 <body>
   <div class="container">
     <div class="jumbotron">
-      <h1 id="jumbotron">SillyStringz.Solutions</h1>
+      <h1 id="jumbotron">Dr. SillyStringz's Factory!</h1>
     </div>
   @RenderBody()
 @* vvvvv Insert Divs creating FileName.cshtml in Shared folder with <div></div> vvvvv *@
-  @await Html.PartialAsync("FileName")
+  @await Html.PartialAsync("Footer")
 
   @* Insert photo using ===>  src='~/img/FileName.jpg' *@
   </div>

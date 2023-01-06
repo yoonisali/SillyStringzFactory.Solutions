@@ -1,8 +1,27 @@
 .jumbotron {
   text-align: center;
-  background-color: rgb(104, 184, 139);
+  background-color: #F4DF4EFF;
+  height: 50px;
+  padding-bottom: 80px;
+  margin-top: 20px;
 }
 
 #jumbotron {
-  font-size: 300%;
+  font-size: 250%;
 }
+
+body {
+  background-color: #949398FF;
+}
+
+div#footer {
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  width:100%;
+  color:#CCC;
+  background: #F4DF4EFF;
+  padding:8px;
+  text-decoration: underline;
+}
+
