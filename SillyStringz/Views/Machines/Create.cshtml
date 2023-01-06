@@ -1,0 +1,16 @@
+@{
+  Layout = "_Layout";
+}
+
+@model SillyStringz.Models.Machine
+
+<div class="form" style="text-align: center; padding-top: 40px;">
+  <h4>Add a new machine!</h4><br>
+
+  @using (Html.BeginForm())
+  {
+    @Html.TextBoxFor(model => model.Name, new { placeholder = "Name", style = "text-align: center;"})
+
+    <br><br><input type="submit" value="Add!" class="btn btn-dark" />
+  }
+</div>
