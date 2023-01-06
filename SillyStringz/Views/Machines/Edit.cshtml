@@ -1,0 +1,33 @@
+@{
+  Layout = "_Layout";
+}
+@await Html.PartialAsync("Footer")
+
+@model SillyStringz.Models.Machine;
+@using SillyStringz.Models;
+
+<h2 style="text-align: center;">Machine Details:</h2>
+<hr>
+<div style="text-align: center;">
+
+  @using (Html.BeginForm())
+  {
+    @Html.HiddenFor(model => model.MachineId)
+    @Html.TextBoxFor(model => model.Name, new { placeholder = "Name", style = "text-align: center;"})<br><br>
+    <input type="submit" value="Edit" class="btn btn-dark" />
+  }
+</div>
+<hr>
+<div class="row">
+  <div class="col-6">
+    <h4>This machine has the following engineers licensed to fix it:</h4>
+    <h6>(Click link to delete)</h6>
+    <ul>
+      @foreach (EngineerMachine join in Model.JoinEntities)
+      {
+        <li>@Html.ActionLink($"{@join.Engineer.Name}", "DeleteEngineer", new {id = @join.Engineer.EngineerId}, new {
+        style = "color: red" })</li>
+      }
+    </ul>
+  </div>
+</div>

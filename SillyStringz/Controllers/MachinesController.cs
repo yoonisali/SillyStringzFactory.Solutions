@@ -65,5 +65,23 @@ namespace SillyStringz.Controllers
       return RedirectToAction("Details", new { id = machine.MachineId });
     }
 
+    [HttpGet("/machines/{id}/edit")]
+    public ActionResult Edit(int id)
+    {
+      Machine thisMachine = _db.Machines
+                              .Include(machine => machine.JoinEntities)
+                              .ThenInclude(join => join.Engineer)
+                              .FirstOrDefault(machine => machine.MachineId == id);
+      return View(thisMachine);
+    }
+
+    [HttpPost("/machines/{id}/edit")]
+    public ActionResult Edit(Machine machine)
+    {
+      _db.Machines.Update(machine);
+      _db.SaveChanges();
+      return RedirectToAction("Details", new { id = machine.MachineId });
+    }
+
   }
 }
