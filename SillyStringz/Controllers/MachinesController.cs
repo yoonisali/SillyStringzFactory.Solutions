@@ -18,7 +18,7 @@ namespace SillyStringz.Controllers
 
     public ActionResult Index()
     {
-      List<Engineer> model = _db.Machines.ToList();
+      List<Machine> model = _db.Machines.ToList();
       return View(model);
     }
 
