@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
-using $ProjectName.Models; 
+using SillyStringz.Solutions.Models; 
 
-namespace $ProjectName 
+namespace SillyStringz.Solutions 
 {
   class Program
   {
@@ -14,7 +14,7 @@ namespace $ProjectName
       builder.Services.AddControllersWithViews();
 
       // Used with ProjectNameContext.cs in Models
-      builder.Services.AddDbContext<$ProjectNameContext>( 
+      builder.Services.AddDbContext<SillyStringz.SolutionsContext>( 
                         dbContextOptions => dbContextOptions
                           .UseMySql(
                             builder.Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(builder.Configuration["ConnectionStrings:DefaultConnection"]
