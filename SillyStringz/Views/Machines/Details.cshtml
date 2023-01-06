@@ -26,11 +26,11 @@
     }
     else
     {
-      <h4>This machine has the following engineers that are licenced to fix it:</h4>
+      <h6>This machine has the following engineers that are licenced to fix it:</h6>
       <ul>
         @foreach (EngineerMachine join in Model.JoinEntities)
         {
-          <li>@Html.ActionLink($"{@join.Engineer.Name}", "Details", "Engineer", new {id = @join.Engineer.EngineerId})</li>
+          <li>@Html.ActionLink($"{@join.Engineer.Name}", "Details", "Engineers", new {id = @join.Engineer.EngineerId})</li>
         }
       </ul>
       <br>
