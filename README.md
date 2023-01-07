@@ -17,7 +17,7 @@
 
 ## Description
 
-_This application allows the user to create, view , and edit engineers and machines for Dr. Silly Stringz Factory.
+_This application allows the user to create, view , and edit engineers and machines for Dr. Silly Stringz Factory._
 
 ## Setup/Installation Requirements
 
